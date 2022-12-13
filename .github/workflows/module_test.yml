@@ -1,4 +1,4 @@
-name: f5-xc-aws-tgw-snode
+name: F5XC AWS TGW SNode module
 on: workflow_dispatch
 jobs:
   f5-xc-aws-tgw-snode-module-validate:

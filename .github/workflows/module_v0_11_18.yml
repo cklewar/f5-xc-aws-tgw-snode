@@ -49,7 +49,7 @@ jobs:
         run: terraform validate -no-color
   aws-tgw-snode-module-plan:
     runs-on: ubuntu-latest
-    needs: [AWS TGW SNode-module-validate]
+    needs: [aws-tgw-snode-module-validate]
     steps:
       - run: echo "The job was automatically triggered by a ${{github.event_name}} event."
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
@@ -112,7 +112,7 @@ jobs:
       - run: echo "This job's status is ${{ job.status }}."
   aws-tgw-snode-module-apply:
     runs-on: ubuntu-latest
-    needs: [AWS TGW SNode-module-plan]
+    needs: [aws-tgw-snode-module-plan]
     steps:
       - run: echo "The job was automatically triggered by a ${{github.event_name}} event."
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
@@ -175,7 +175,7 @@ jobs:
       - run: echo "This job's status is ${{ job.status }}."
   aws-tgw-snode-module-destroy:
     runs-on: ubuntu-latest
-    needs: [AWS TGW SNode-module-apply]
+    needs: [aws-tgw-snode-module-apply]
     steps:
       - run: echo "The job was automatically triggered by a ${{github.event_name}} event."
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."

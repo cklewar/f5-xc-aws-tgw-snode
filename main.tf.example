@@ -105,11 +105,8 @@ module "aws_tgw_single_node_new_tgw_new_subnets" {
     }
   }
   ssh_public_key = file(var.ssh_public_key_file)
-  custom_tags    = {
-    Deployment = format("%s-tgw-m-node-new-sub-%s", var.project_prefix, var.project_suffix)
-    TTL        = -1
-    Owner      = "c.klewar@f5.com"
-  }
+  custom_tags    = local.custom_tags
+
   providers = {
     aws      = aws.us-east-2
     volterra = volterra.default

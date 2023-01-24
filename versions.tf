@@ -5,19 +5,19 @@ terraform {
     hostname     = "app.terraform.io"
 
     workspaces {
-      name = "f5-xc-aws-tgw-snode"
+      name = "f5-xc-aws-tgw-snode-module"
     }
   }
 
   required_providers {
     volterra = {
       source  = "volterraedge/volterra"
-      version = ">= 0.11.16"
+      version = "= 0.11.16"
     }
 
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 4.33.0"
+      version = ">= 4.51.0"
     }
 
     local = ">= 2.2.3"

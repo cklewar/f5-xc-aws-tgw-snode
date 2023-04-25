@@ -119,5 +119,5 @@ output "f5xc_aws_vpc_single_node_single_nic_new_vpc_new_subnet" {
 module "f5xc_aws_vpc_single_node_single_nic_new_vpc_new_subnet_apply_timeout_workaround" {
   source         = "./modules/utils/timeout"
   depend_on      = module.aws_tgw_single_node_new_tgw_new_subnets.f5xc_aws_tgw
-  create_timeout = "900s"
+  create_timeout = "1800s"
 }
